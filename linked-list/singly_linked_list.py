@@ -71,14 +71,17 @@ class LinkedList:
 
 		self.head = self.head.next
 
-	def search(self, searchVal):
+	def search(self, search_value):
 		if self.head == None:
 			return None
 
-		cur = head
+		cur = self.head
 		while True:
 			if cur == None:
-				break
+				return -1
+
+			if cur.value == search_value:
+				return cur
 
 			cur = cur.next
 
